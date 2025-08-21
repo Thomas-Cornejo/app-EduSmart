@@ -2,6 +2,7 @@ import Schedule from "../models/schedule.model.js";
 import BlockSchedule from "../models/blockSchedule.model.js";
 import TeacherSubject from "../models/teacherSubject.model.js";
 import Classroom from "../models/classroom.model.js";
+import { Level } from "../models/level.model.js";
 import { Op } from "sequelize";
 
 export const createSchedule = async (req, res) => {
@@ -50,7 +51,11 @@ export const createSchedule = async (req, res) => {
     });
 
     const scheduleWithRelations = await Schedule.findByPk(schedule.id, {
-      include: [BlockSchedule, TeacherSubject, Classroom],
+      include: [
+        BlockSchedule,
+        TeacherSubject,
+        { model: Classroom, include: [Level] },
+      ],
     });
 
     res.status(201).json(scheduleWithRelations);
@@ -63,7 +68,11 @@ export const createSchedule = async (req, res) => {
 export const getSchedules = async (req, res) => {
   try {
     const schedules = await Schedule.findAll({
-      include: [BlockSchedule, TeacherSubject, Classroom],
+      include: [
+        BlockSchedule,
+        TeacherSubject,
+        { model: Classroom, include: [Level] },
+      ],
     });
     res.json(schedules);
   } catch (error) {
@@ -123,7 +132,11 @@ export const updateSchedule = async (req, res) => {
     });
 
     const updatedSchedule = await Schedule.findByPk(id, {
-      include: [BlockSchedule, TeacherSubject, Classroom],
+      include: [
+        BlockSchedule,
+        TeacherSubject,
+        { model: Classroom, include: [Level] },
+      ],
     });
 
     res.json(updatedSchedule);
