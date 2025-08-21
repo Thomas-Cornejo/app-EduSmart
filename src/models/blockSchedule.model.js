@@ -1,4 +1,4 @@
-import sequelize from "../../database.js";
+import sequelize from "../database.js";
 import { DataTypes } from "sequelize";
 import TemplateSchedule from "./templateSchedule.js";
 
@@ -7,10 +7,6 @@ export const BlockSchedule = sequelize.define("blocks_schedules", {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
-  },
-  day: {
-    type: DataTypes.STRING,
-    allowNull: false,
   },
   start_hour: {
     type: DataTypes.TIME,
@@ -22,7 +18,7 @@ export const BlockSchedule = sequelize.define("blocks_schedules", {
   },
   break: {
     type: DataTypes.TIME,
-    allowNull: false,
+    allowNull: true,
   },
   template_schedule_id: {
     type: DataTypes.INTEGER,

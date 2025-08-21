@@ -13,8 +13,8 @@ teacherRoutes.get("/teachers/:id_user", getTeacher);
 
 teacherRoutes.post("/teachers", createTeacher);
 
-teacherRoutes.delete("/teachers/:id_user", deleteTeacher);
+teacherRoutes.delete("/teachers/:id_teacher", deleteTeacher);
 
-teacherRoutes.put("/teachers/:id_user", updateTeacher);
+teacherRoutes.put("/teachers/:id_teacher", updateTeacher);
 
 export default teacherRoutes;

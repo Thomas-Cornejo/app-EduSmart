@@ -9,12 +9,12 @@ import {
 const subjectRoutes = Router();
 
 subjectRoutes.get("/subjects", getSubjects);
-subjectRoutes.get("/subjects/:id_user", getSubjectById);
+subjectRoutes.get("/subjects/:id_subject", getSubjectById);
 
 subjectRoutes.post("/subjects", createSubject);
 
-subjectRoutes.delete("/subjects/:id_user", deleteSubject);
+subjectRoutes.delete("/subjects/:id_subject", deleteSubject);
 
-subjectRoutes.put("/subjects/:id_user", updateSubject);
+subjectRoutes.put("/subjects/:id_subject", updateSubject);
 
 export default subjectRoutes;
