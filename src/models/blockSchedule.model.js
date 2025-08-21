@@ -1,4 +1,4 @@
-import sequelize from "../database.js";
+import sequelize from "../../database.js";
 import { DataTypes } from "sequelize";
 import TemplateSchedule from "./templateSchedule.js";
 

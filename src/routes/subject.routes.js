@@ -1,20 +1,18 @@
 import { Router } from "express";
 import {
-  createSubject,
-  getSubjects,
-  getSubjectById,
-  updateSubject,
-  deleteSubject,
+  createSchedule,
+  getSchedules,
+  updateSchedule,
+  deleteSchedule,
 } from "../controllers/schedule.controller.js";
 const subjectRoutes = Router();
 
-subjectRoutes.get("/subjects", getSubjects);
-subjectRoutes.get("/subjects/:id_subject", getSubjectById);
+subjectRoutes.get("/subjects", getSchedules);
 
-subjectRoutes.post("/subjects", createSubject);
+subjectRoutes.post("/subjects", createSchedule);
 
-subjectRoutes.delete("/subjects/:id_subject", deleteSubject);
+subjectRoutes.delete("/subjects/:id_subject", deleteSchedule);
 
-subjectRoutes.put("/subjects/:id_subject", updateSubject);
+subjectRoutes.put("/subjects/:id_subject", updateSchedule);
 
 export default subjectRoutes;

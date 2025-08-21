@@ -1,7 +1,6 @@
-import TemplateSchedule from "../models/templateSchedule.model.js";
+import TemplateSchedule from "../models/templateSchedule.js";
 import BlockSchedule from "../models/blockSchedule.model.js";
 import Level from "../models/level.model.js";
-
 
 export const getTemplateById = async (req, res) => {
   try {

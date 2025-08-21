@@ -1,13 +1,16 @@
 import { Router } from "express";
 import {
   createTemplateSchedule,
-  getTemplates,
+  getTemplateById,
   deleteTemplateSchedule,
   updateTemplateSchedule,
-} from "../controllers/templates_schedules.controller.js";
+} from "../controllers/templateSchedule.controller.js";
 const templateSchedulesRoutes = Router();
 
-templateSchedulesRoutes.get("/templates_schedules", getTemplates);
+templateSchedulesRoutes.get(
+  "/templates_schedules/:id_templateschedules",
+  getTemplateById
+);
 
 templateSchedulesRoutes.post("/templates_schedules", createTemplateSchedule);
 

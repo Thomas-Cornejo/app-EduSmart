@@ -4,7 +4,7 @@ import {
   updateClassroom,
   deleteClassroom,
   getClassrooms,
-} from "../controllers/classroom.controller";
+} from "../controllers/classroom.controller.js";
 const classroomRoutes = Router();
 
 classroomRoutes.post("/levels", createClassroom);
