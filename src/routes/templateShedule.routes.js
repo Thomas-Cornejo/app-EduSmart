@@ -4,20 +4,20 @@ import {
   getTemplates,
   deleteTemplateSchedule,
   updateTemplateSchedule,
-} from "../controllers/templateSchedule.controller.js";
+} from "../controllers/templates_schedules.controller.js";
 const templateSchedulesRoutes = Router();
 
-templateSchedulesRoutes.get("/templateschedules", getTemplates);
+templateSchedulesRoutes.get("/templates_schedules", getTemplates);
 
-templateSchedulesRoutes.post("/templateschedules", createTemplateSchedule);
+templateSchedulesRoutes.post("/templates_schedules", createTemplateSchedule);
 
 templateSchedulesRoutes.delete(
-  "/templateschedules/:id_templateschedules",
+  "/templates_schedules/:id_templateschedules",
   deleteTemplateSchedule
 );
 
 templateSchedulesRoutes.put(
-  "/templateschedules/:id_templateschedules",
+  "/templates_schedules/:id_templateschedules",
   updateTemplateSchedule
 );
 
