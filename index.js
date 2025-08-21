@@ -1,5 +1,14 @@
 import app from "./app.js";
-
-
+import { connectDB } from "./database.js";
+import "./src/models/user.models.js";
+import "./src/models/templateSchedule.js";
+import "./src/models/teacherSubject.model.js";
+import "./src/models/teacher.model.js";
+import "./src/models/subject.model.js";
+import "./src/models/schedule.model.js";
+import "./src/models/level.model.js";
+import "./src/models/classroom.model.js";
+import "./src/models/blockSchedule.model.js";
+connectDB();
 app.listen(3000);
 console.log("Server listening on port", 3000);
