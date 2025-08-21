@@ -16,6 +16,10 @@ export const Schedule = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    day: {
+      type: DataTypes.ENUM("Lunes", "Martes", "Miércoles", "Jueves", "Viernes"),
+      allowNull: false,
+    },
     block_schedule_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
