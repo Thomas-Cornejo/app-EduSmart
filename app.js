@@ -6,6 +6,7 @@ import teacherSubjectRoutes from "./src/routes/teacherSubject.routes.js";
 import scheduleRoutes from "./src/routes/schedule.routes.js";
 import templateSchedulesRoutes from "./src/routes/templateShedule.routes.js";
 import levelRoutes from "./src/routes/level.routes.js";
+import classroomRoutes from "./src/routes/classroom.routes.js";
 
 const app = express();
 app.use(express.json());
@@ -17,5 +18,6 @@ app.use("/api", teacherSubjectRoutes);
 app.use("/api", scheduleRoutes);
 app.use("/api", templateSchedulesRoutes);
 app.use("/api", levelRoutes);
+app.use("/api", classroomRoutes);
 
 export default app;
